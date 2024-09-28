@@ -1,0 +1,20 @@
+{
+    "name": "strawberri-paws",
+    "version": "1.0.0",
+    "description": "A Node.js application with Express, EJS, and session management",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "dotenv": "^16.4.5",
+        "ejs": "^3.1.8",
+        "express": "^4.18.2",
+        "express-session": "^1.17.3"
+    },
+    "engines": {
+        "node": ">=14.x"
+    },
+    "author": "Sopheaktra LEAN",
+    "license": "MIT"
+}

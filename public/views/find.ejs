@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Find A Pet</title>
+        <link rel="stylesheet" href = "/css/base.css">
+        <link rel="stylesheet" href = "/css/findpage.css">
+        <script src="/js/base.js"></script>
+    
+    </head>
+
+    <body>
+        <div class="datetime" id="datetime"> 
+
+        </div>
+        <%- include('layouts/header') %>
+
+        <h1>Finding A Dog Or Cat To Adopt</h1>
+
+        <p>
+            Please enter the information below. Your privacy will be safeguarded, 
+            and we will contact you within 7-14 business days after your application is submitted. 
+            Rest assured, we are committed to ensuring a smooth and secure finding process.
+        </p>
+    
+        <form action="/find" id="findForm" method ="post">
+            <fieldset>
+                <legend>Enter Your Personal Information</legend>
+                <label for="firstname" style="margin-left: 20px;">First Name: </label>
+                <input type="text" id = "firstname" name = "firstname">
+                <span class="error" id="firstnameError"></span>
+                
+                <br><br>
+                <label for="lastname" style="margin-left: 20px;">Last Name: </label>
+                <input type="text" id = "lastname" name = "lastname">
+                <span class="error" id="lastnameError"></span>
+                <br><br>
+                <label for="email" style="margin-left: 20px;">Email Address: </label>
+                <input type="text" id = "email" name = "email">
+                <span class="error" id="emailError"></span>
+                <br><br>
+                <label for="phonenumber" style="margin-left: 20px;">Phone Number: </label>
+                <input type="text" id = "phonenumber" name = "phonenumber">
+                <span class="error" id="phonenumberError"></span>
+                <br>
+            </fieldset>
+    
+            <br><br>
+           
+            <fieldset>
+                <legend>Enter The Pet Information</legend>
+                <label style="margin-left: 20px;">Pet Type:</label>
+                <input type="radio" id="cat" name="pettype" value="cat">
+                <label for="cat">Cat</label>
+
+                <input type="radio" id="dog" name="pettype" value="dog">
+                <label for="dog">Dog</label>
+                <span class="error" id="pettypeError"></span>
+
+                <br><br>
+                <label for="cattype" style="margin-left: 20px;">Cat Type:</label>
+                <select id="cattype" name="cattype" disabled>
+                    <option value="Ragdoll">Ragdoll</option>                    
+                    <option value="Birman">Birman</option>
+                    <option value="Siamese">Siamese</option>
+                    <option value="Persian">Persian</option>
+                    <option value="Maine Coon">Maine Coon</option>
+                    <option value="Sphynx">Sphynx</option>
+                    <option value="Bengal">Bengal</option>                    
+                    <option value="British Shorthair">British Shorthair</option>
+                    <option value="Scottish Fold">Scottish Fold</option>
+                    <option value="Ragamuffin">Ragamuffin</option>
+                    <option value="Mixed Breed">Mixed Breed</option>
+                    <option value="Other">Other</option>
+                </select>
+                <span class="error" id="cattypeError"></span>
+    
+                <br><br>
+    
+                <label for="dogtype" style="margin-left: 20px;">Dog Type:</label>
+                <select id="dogtype" name="dogtype" disabled>
+                    <option value="Labrador Retriever">Labrador Retriever</option>
+                    <option value="German Shepherd">German Shepherd</option>
+                    <option value="Golden Retriever">Golden Retriever</option>
+                    <option value="Bulldog">Bulldog</option>
+                    <option value="beagle">Beagle</option>
+                    <option value="Poodle">Poodle</option>
+                    <option value="Rottweiler">Rottweiler</option>
+                    <option value="Yorkshire Terrier">Yorkshire Terrier</option>
+                    <option value="Boxer">Boxer</option>
+                    <option value="Dachshund">Dachshund</option>
+                    <option value="Mixed Breed">Mixed Breed</option>
+                    <option value="Other">Other</option>                    
+                </select>
+                <span class="error" id="dogtypeError"></span>
+    
+                <br><br>
+                <label style="margin-left: 20px;">Pet Age:</label>
+                <input type="radio" id="age1" name="petage" value="Less than 1 year">
+                <label for="age1">Less than 1 year</label>
+                <input type="radio" id="age2" name="petage" value="1-3 years">            
+                <label for="age2">1-3 years</label>
+                <input type="radio" id="age3" name="petage" value="4-7 years">
+                <label for="age3">4-7 years</label>
+                <input type="radio" id="age4" name="petage" value="8 years and above">
+                <label for="age4">8 years and above</label>
+                <input type="radio" id="doesnotmatter" name="petage" value="Does Not Matter">
+                <label for="doesnotmatter">Does Not Matter</label>
+                <span class="error" id="petageError"></span>
+                <br><br>
+                <label style="margin-left: 20px;">Pet Gender:</label>
+                <input type="radio" id="female" name="petgender" value="Female">
+                <label for="female">Female</label>
+                <input type="radio" id="male" name="petgender" value="Male">
+                <label for="male">Male</label>
+                <input type="radio" id="no_preference" name="petgender" value="Does Not Matter">
+                <label for="no_preference">Does Not matter</label>
+                <span class="error" id="petgenderError"></span>
+                <br><br>
+    
+                <label for="friendliness" style="margin-left: 20px;">Friendliness Level:</label>
+                <select id="friendliness" name="friendliness">
+                    <option value="very_friendly">Very Friendly</option>
+                    <option value="friendly">Friendly</option>
+                    <option value="neutral">Neutral</option>
+                    <option value="unfriendly">Unfriendly</option>
+                    <option value="very_unfriendly">Very Unfriendly</option>
+                </select>
+                <span class="error" id="friendlinessError"></span>
+                <br><br>
+    
+                <label for="description" class="form-label">Any description (Optional):</label><br>
+                <textarea id="description" name="description" rows="4" class="form-textarea" placeholder="Write any specific details about the pet..."></textarea>
+    
+                
+                <br>
+            </fieldset>
+    
+            <br>
+            <input type="submit" value="Submit" class="submit-button">
+            <input type="reset" value="Clear" class="clear-button">
+    
+
+        </form>
+
+
+
+        
+        <p>
+            At Strawberri, we are dedicated to matching you with the perfect pet that suits your lifestyle and preferences. Our team thoroughly reviews every application to ensure that every pet finds a loving home. Thank you for trusting us with your adoption journey.
+        </p>
+
+        
+
+
+        <%- include('layouts/footer') %>
+
+        <script src="/js/adoptionfind.js"> </script>
+    </body>
+</html>

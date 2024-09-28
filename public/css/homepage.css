@@ -1,0 +1,130 @@
+h1 {
+    font-family: cursive, bradley hand; 
+    font-size: 24px;
+    font-weight: bold;
+    color: #f01961; 
+    text-align: center;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.image-container img{
+    border-radius: 8px;
+}
+
+
+.featured-pets {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
+
+.pet {
+    width: calc(25% - 20px); 
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgb(244, 255, 212);
+    border-radius: 4px;
+}
+
+.pet img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.pet .info {
+    padding: 0 20px;
+}
+
+.pet .info h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.pet .info p {
+    margin-bottom: 8px;
+}
+
+.pet .info p:last-child {
+    margin-bottom: 15px;
+}
+
+.pet .info a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #dd5c89;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+
+}
+
+.pet .info a:hover {
+    background-color: #b9486f;
+}
+
+@media (max-width: 767px) {
+    .search-container {
+        padding: 20px;
+    }
+
+    .featured-pets {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pet {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .image-container {
+        flex-direction: column;
+    }
+    
+    .image-container img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .search-container {
+        padding: 30px;
+    }
+
+    .featured-pets {
+        justify-content: space-around;
+    }
+
+    .pet {
+        width: calc(33.3% - 20px);
+    }
+
+    .image-container {
+        flex-direction: row;
+    }
+    
+    .image-container img {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .pet {
+        width: calc(20% - 20px);
+    }
+}

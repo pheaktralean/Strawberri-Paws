@@ -1,0 +1,38 @@
+<header>
+    <div class="logo">
+        <a href="/">
+            <img src="../images/strawberrilogo.png" alt="Logo" height="100" width="150">
+        </a>
+        <span class="title">Strawberri Paws Adoption</span>
+    </div>
+    
+    <div class="menu-icon-container">
+        <label for="menuToggle" class="menu-icon">&#9776; Menu</label>
+    </div>
+    <input type="checkbox" id="menuToggle" class="menu-toggle">
+    <nav id="sideMenu" class="side-menu">
+        <label for="menuToggle" class="close-menu">&#10005;</label>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/event">Events</a></li>
+            <li><a href="/find">Find a Dog or a Cat</a></li>
+            <li><a href="/dogcare">Dog Care</a></li>
+            <li><a href="/catcare">Cat Care</a></li>
+            <li><a href="/giveaway">Have a Pet to Give Away</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+            <% if (typeof user !== 'undefined') { %>
+                <li>
+                    <form id="logoutForm" action="/logout" method="POST" style="display: inline;">
+                        <button type="submit" style="background:none;border:none;color:black; font-family: 'Times New Roman', Times, serif; font-size: 18px;">
+                            Logout
+                        </button>
+                    </form>
+                </li>            
+            <% } else { %>
+                <li><a href="/login" style="color: black;">Log in</a></li>
+                <li><a href="/signup" style="color: black;">Create an Account</a></li>
+            <% } %>
+        </ul>
+    </nav>
+</header>
+

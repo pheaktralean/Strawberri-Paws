@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Strawberri Paws Adoption</title>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/loginpage.css">
+    <script src="/js/base.js"></script>
+</head>
+<body>
+    <div class="datetime" id="datetime"> 
+
+    </div>
+    <%- include('layouts/header') %>
+
+    <div class="auth-container">
+        <div class="auth-box">
+            <h2>Login</h2>
+            <form id="loginForm" method="post" action="/login">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit">Log In</button>
+            </form>
+            <p><a href="/signup">Not a member? Sign Up</a></p>
+            <p><a href="#">Forgot Password?</a></p>
+        </div>
+    </div>
+
+    <script src="/js/login.js"></script>
+    <%- include('layouts/footer') %>
+</body>
+</html>

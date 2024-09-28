@@ -1,0 +1,92 @@
+/* Base styles */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    /*background-color: #ffffdb;*/
+    padding: 10px; /* Added padding for small screens */
+}
+      
+.auth-box {
+    background: rgb(255, 252, 206);
+    padding: 20px;
+        border-radius: 8px;
+        box-shadow: 10px rgba(228, 28, 28, 0.1);
+        max-width: 400px;
+        width: 100%;
+        max-width: 400px; /* Maximum width for larger screens */
+        box-sizing: border-box;
+}
+      
+          .auth-box h2 {
+              margin-bottom: 20px;
+              text-align: center; /* Centered heading */
+          }
+      
+          .auth-box form label {
+              display: block;
+              margin-bottom: 5px;
+          }
+      
+          .auth-box form input {
+              width: 100% ;/* Adjust width to account for padding */
+              box-sizing: border-box;
+              padding: 10px;
+              margin-bottom: 15px;
+              border: 1px solid #ddd;
+              border-radius: 4px;
+          }
+      
+          .auth-box form button {
+              width: 100%;
+              padding: 10px;
+              border: none;
+              background-color: #ec7843;
+              color: #fff;
+              font-size: 16px;
+              border-radius: 4px;
+              cursor: pointer;
+          }
+      
+          .auth-box form button:hover {
+              background-color: #f06424; /* Slightly darker green on hover */
+          }
+      
+          .auth-box p {
+              margin-top: 15px;
+              text-align: center; /* Centered text */
+          }
+      
+          /* Responsive styles */
+          @media (max-width: 768px) {
+              .auth-container {
+                  padding: 20px; /* More padding for tablets */
+              }
+              
+              .auth-box {
+                  padding: 15px;
+              }
+              
+              .auth-box form input,
+              .auth-box form button {
+                  padding: 12px;
+              }
+          }
+      
+    @media (max-width: 480px) {
+        .auth-container {
+                padding: 10px; /* Padding for smaller screens */
+            }
+              
+              .auth-box {
+                  padding: 10px;
+              }
+              
+              .auth-box form input,
+              .auth-box form button {
+                  padding: 15px;
+              }
+          }
+      
+              

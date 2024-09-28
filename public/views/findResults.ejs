@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strawberri Paws Dog Caring Tips</title>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/findResults.css">
+
+    <script src="/js/base.js" defer></script>
+</head>
+<body>
+    <div class="datetime" id="datetime"></div>
+
+    <%- include('layouts/header') %>
+    <h1 > Result From Find Form</h1>
+    <div class="events-section">
+        <% if (matches.length > 0) { %>
+            <% matches.forEach(pet => { %>
+                <% // Parse the JSON string if necessary %>
+                <% const petData = JSON.parse(pet); %>
+                <div class="event">
+                    <img src="/images/<%= petData.image %>" alt="<%= pet.breed %>">
+                    <div class="info">
+                        <h3 style="color:rgb(240, 45, 84);"><%= petData.breed %></h3>
+                        <p>Breed: <%= petData.breed %></p>
+                        <p>Age: <%= petData.age %></p>
+                        <p>Gender: <%= petData.gender %></p>
+                        <p>Friendliness: <%= petData.friendliness %></p>
+                        <a href="/form">Adopt <%= petData.breed %></a>
+                    </div>
+                </div>
+            <% }) %>
+        <% } else { %>
+            <p>No pets found matching your criteria.</p>
+        <% } %>
+        </div>
+    
+    
+
+    <%- include('layouts/footer') %>
+</body>
+</html>

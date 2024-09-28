@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Strawberri Paws</title>
+        <link rel="stylesheet" href = "/css/base.css">
+        <link rel="stylesheet" href = "/css/contactpage.css">
+        <script src="/js/base.js"> </script>
+    </head>
+    <body>
+        <div class="datetime" id="datetime"> </div>
+        <%- include('layouts/header') %>
+
+        <h1>Contact Us</h1>
+        <p style = "font-size: large; font-family:'Times New Roman', Times, serif;">
+            Congratulations on thinking about adopting a dog or cat! We are thrilled to assist you in finding your new furry friend. 
+            If you are considering giving away your dog or cat, we understand this can be a difficult decision, and we are here to help ensure your pet finds a loving new home. 
+            We are always happy to help you find the perfect pet to adopt or to find a new home for your beloved pet. If you have any questions, please do not hesitate to contact us. 
+            Our team is here to support you every step of the way.
+        </p>
+
+        <fieldset class="fieldset-custom">
+            <form>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="email" class="form-label">Email</label>
+                        </td>
+                        <td>
+                            <label for="name" class="form-label">Name</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> 
+                            <input type="text" id="email" name="email" class="form-input">
+                        </td>
+                        <td> 
+                            <input type="text" id="name" name="name" class="form-input" >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <br>
+                            <input type="submit" value="Submit" class="submit-button">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        
+        </fieldset>
+
+        <br>
+
+    
+        <section class="social-media">
+            <h2>Connect with Us</h2>
+            <div class="social-icons">
+                <!--
+                Social Media Icon Links: 
+                Facebook: https://www.logo.wine/a/logo/Facebook/Facebook-f_Logo-White-Dark-Background-Logo.wine.svg
+                Twitter: https://img.freepik.com/free-vector/new-2023-twitter-logo-x-icon-design_1017-45418.jpg?w=1380&t=st=1721601478~exp=1721602078~hmac=6f97c1eb78d2664aab91676f6acf38ad8f63cd66abe541211c4c8981ae089b0a
+                Instagram: https://www.stickpng.com/img/icons-logos-emojis/tech-companies/instagram-logo
+                Linkedlin: https://www.google.com/url?sa=i&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3ALinkedIn_logo_initials.png&psig=AOvVaw3zCmWvHUM_KpRNVpdYrCUN&ust=1721687937850000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCOjnz8SZuYcDFQAAAAAdAAAAABAJ
+                -->
+                <a href="https://www.facebook.com/strawberripaws" target="_blank">
+                    <img src="../images/facebook.svg" alt="Facebook">
+                </a>
+                <a href="https://www.twitter.com/strawberripaws" target="_blank">
+                    <img src="../images/twitter.svg" alt="Twitter">
+                </a>
+                <a href="https://www.instagram.com/strawberripaws" target="_blank">
+                    <img src="../images/instagram.webp" alt="Instagram">
+                </a>
+                <a href="https://www.linkedin.com/strawberripaws" target="_blank">
+                    <img src="../images/linkedlin.png" alt="LinkedIn">
+                </a>
+            </div>
+        </section>
+        
+        <%- include('layouts/footer') %>
+        
+        
+    </body>
+</html>

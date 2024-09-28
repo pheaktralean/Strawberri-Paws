@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strawberri Paws Adoption</title>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/homepage.css">
+    <script src="/js/logout.js"></script>
+    <script src="/js/base.js"></script>
+</head>
+<body>
+    <div class="datetime" id="datetime"></div>
+    
+    <%- include('layouts/header') %>
+
+    <h1>Find Your New Best Friend Today!</h1>
+    <div class="image-container">
+        <img src="../images/20400568.jpg" alt="Cat and Dog" height="300">
+    </div>
+
+    <div class="content-area">
+        <h2 style="color: rgb(233, 47, 47);">Get your family a new member</h2>
+        <p style="color: rgb(87, 28, 28);">Welcome a furry friend into your home and experience the unconditional love and joy they bring. 
+            Each pet has a unique story and an abundance of love to share. 
+            By adopting, you give them a second chance at a happy life, and in return, they become a cherished part of your family. 
+            Open your heart and home to a pet in need, and create beautiful memories together that will last a lifetime. 
+            Start your journey to finding a new best friend today!</p>
+    </div>
+
+    <h2 style="color: rgb(233, 47, 47);">Featured Dogs and Cats</h2>
+    <section class="featured-pets">
+        <div class="pet">
+            <img src="../images/max.jpeg" alt="Dog 1">
+            <div class="info">
+                <h3 style="color:rgb(240, 45, 84);">Max</h3>
+                <p>Breed: Labrador Retriever</p>
+                <p>Age: 3 years</p>
+                <p>Gender: Male</p>
+                <p>ID: #123456</p>
+                <a href="/form">Adopt Max</a>
+            </div>
+        </div>
+        
+        <div class="pet">
+            <img src="../images/bella.jpeg" alt="Dog 2">
+            <div class="info">
+                <h3 style="color:rgb(240, 45, 84);">Bella</h3>
+                <p>Breed: Mixed Breed</p>
+                <p>Age: 2 years</p>
+                <p>Gender: Female</p>
+                <p>ID: #654321</p>
+                <a href="/form">Adopt Bella</a>
+            </div>
+        </div>
+
+        <div class="pet">
+            <img src="../images/whiskers.jpeg" alt="Cat 1">
+            <div class="info">
+                <h3 style="color:rgb(240, 45, 84);">Whiss</h3>
+                <p>Breed: Domestic Shorthair</p>
+                <p>Age: 1.5 years</p>
+                <p>Gender: Male</p>
+                <p>ID: #987654</p>
+                <a href="/form">Adopt Whiss</a>
+            </div>
+        </div>
+
+        <div class="pet">
+            <img src="../images/luna.jpeg" alt="Cat 2">
+            <div class="info">
+                <h3 style="color:rgb(240, 45, 84);">Eve</h3>
+                <p>Breed: Siamese Mix</p>
+                <p>Age: 4 years</p>
+                <p>Gender: Female</p>
+                <p>ID: #567890</p>
+                <a href="/form">Adopt Eve</a>
+            </div>
+        </div>
+
+        <div class="pet">
+            <img src="../images/angel.jpeg" alt="Cat 3">
+            <div class="info">
+                <h3 style="color:rgb(240, 45, 84);">Dove</h3>
+                <p>Breed: Vermicelli</p>
+                <p>Age: 8 months</p>
+                <p>Gender: Male</p>
+                <p>ID: #168168</p>
+                <a href="/form">Adopt Dove</a>
+            </div>
+        </div>
+    </section>
+    
+    <%- include('layouts/footer') %>
+</body>
+</html>

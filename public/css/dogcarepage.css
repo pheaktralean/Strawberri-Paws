@@ -1,0 +1,152 @@
+h1 {
+    font-family: cursive, bradley hand; 
+    font-size: 24px;
+    font-weight: bold;
+    color: #f01961; 
+    text-align: center;
+}
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.image-container, img {
+    max-width: 100%;
+}
+
+.care-section {
+    background-color: rgb(255, 221, 221);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 0px;
+}
+
+li{
+    color: rgb(237, 71, 71);
+}
+
+ol {
+    padding-left: 20px;
+}
+
+ol li {
+    margin-bottom: 20px;
+}
+
+ol li h2 {
+    font-size: 20px;
+    color: rgb(237, 71, 71);
+}
+
+ol li p {
+    font-size: 16px;
+    color: rgb(87, 87, 87);
+    margin: 5px 0 0 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.care-list {
+    list-style: decimal;
+    padding-left: 20px;
+}
+
+.care-list li {
+    margin-bottom: 20px;
+}
+
+.care-list li ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+.care-list li ul li {
+    font-size: 16px;
+    color: rgb(46, 45, 45);
+    margin-bottom: 5px;
+}
+
+.care-list li ul li:last-child {
+    margin-bottom: 0;
+}
+
+.extra-caring {
+    padding: 20px;
+    background-color: rgb(243, 252, 209);
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.extra-caring, h4{
+    color:#f0457e;
+}
+
+.extra-caring ul {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    list-style-type: none;
+    padding: 0;
+}
+
+.extra-caring ul li {
+    margin-bottom: 10px;
+}
+
+.extra-caring ul li a {
+    color: #6b0901;
+    text-decoration: none;
+}
+
+.extra-caring ul li a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+    .care-section, .extra-caring {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    ol li h2 {
+        font-size: 18px;
+    }
+
+    ol li p, .care-list li ul li {
+        font-size: 14px;
+    }
+
+    .image-container {
+        flex-direction: column;
+    }
+    
+    .image-container img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .care-section, .extra-caring {
+        margin: 15px;
+        padding: 18px;
+    }
+
+    ol li h2 {
+        font-size: 19px;
+    }
+
+    ol li p, .care-list li ul li {
+        font-size: 15px;
+    }
+
+    .image-container {
+        flex-direction: row;
+    }
+    
+    .image-container img {
+        max-width: 80%;
+    }
+}

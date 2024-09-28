@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pet To Give Away</title>
+        <link rel="stylesheet" href = "/css/base.css">
+        <link rel="stylesheet" href = "/css/giveawaypage.css">
+    </head>
+    <body>
+        <div class="datetime" id="datetime"> 
+
+        </div>
+        <%- include('layouts/header') %>
+
+        <h1>Giving Away Your Cat Or Dog?</h1>
+
+        <p>
+            Please enter the information below. Your privacy will be safeguarded, and we will contact you within 7-14 business days after your application is submitted. An interview will also be scheduled to ensure the best possible outcome for your pet. Rest assured, we are committed to ensuring a smooth and secure process for giving away your pet.
+        </p>
+        
+        <form id="giveawayForm">
+            <fieldset>
+                <legend>Enter Owner's Information</legend>
+                
+                <label for="firstname" style="margin-left: 20px;">First Name: </label>
+                <input type="text" id = "firstname" name = "firstname">
+                <span class="error" id="firstnameError"></span>
+                <br><br>
+                <label for="lastname" style="margin-left: 20px;">Last Name: </label>
+                <input type="text" id = "lastname" name = "lastname">
+                <span class="error" id="lastnameError"></span>
+                <br><br>
+                <label for="address" style="margin-left: 20px;">Address: </label>
+                <input type="text" id = "address" name = "address">
+                <span class="error" id="addressError"></span>
+                <br><br>
+                <label for="email" style="margin-left: 20px;">Email Address: </label>
+                <input type="text" id = "email" name = "email">
+                <span class="error" id="emailError"></span>
+                <br><br>
+                <label for="phonenumber" style="margin-left: 20px;">Phone Number: </label>
+                <input type="text" id = "phonenumber" name = "phonenumber">
+                <span class="error" id="phonenumberError"></span>
+                <br><br>
+            </fieldset>
+    
+            <br>
+            <fieldset>
+                <legend>Enter Your Pet Information</legend>
+                <label style="margin-left: 20px;">Pet Type:</label>
+                <input type="radio" id="cat" name="pettype" value="cat">
+                <label for="cat">Cat</label>
+    
+                <input type="radio" id="dog" name="pettype" value="dog">
+                <label >Dog</label>
+                <span class="error" id="pettypeError"></span>
+                <br><br>
+    
+                <label for="cattype" style="margin-left: 20px;">Cat Type:</label>
+                <input type="text" id="cattype" name="cattype">
+                <span class="error" id="cattypeError"></span>
+                <br><br>
+                <label for="dogtype" style="margin-left: 20px;">Or Dog Type:</label>
+                <input type="text" id="dogtype" name="dogtype">
+                <span class="error" id="dogtypeError"></span>
+                
+                <br><br>
+                <label style="margin-left: 20px;">Pet's Age:</label>
+                <select id="age" name="age">
+                    <option value="less_than_1_year">Less than 1 year</option>
+                    <option value="1_3_years">1 to 3 years</option>
+                    <option value="4_7_years">4 to 7 years</option>
+                    <option value="8_years_and_above">8 years and above</option>
+                    <option value="doesnotmatter">Does not matter</option>
+                </select>
+                <span class="error" id="petageError"></span>
+                <br><br>
+    
+                <label  style="margin-left: 20px;">Pet Gender:</label>
+                <input type="radio" id="female" name="petgender" value="female">
+                <label for="female">Female</label>
+                <input type="radio" id="male" name="petgender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="no_preference" name="petgender" value="no_preference">
+                <label for="no_preference">Does not matter</label>
+                <span class="error" id="petgenderError"></span>
+                <br><br>
+    
+                <label for="friendliness" style="margin-left: 20px;">Friendliness Level:</label>
+                <select id="friendliness" name="friendliness">
+                    <option value="very_friendly">Very Friendly</option>
+                    <option value="friendly">Friendly</option>
+                    <option value="neutral">Neutral</option>
+                    <option value="unfriendly">Unfriendly</option>
+                    <option value="very_unfriendly">Very Unfriendly</option>
+                </select>
+                <span class="error" id="friendlinessError"></span>
+                <br><br>
+
+                <label for="adaptability" style="margin-left: 20px;">Adaptability Level:</label>
+                <select id="adaptability" name="adaptability">
+                    <option value="veryhigh">Very High</option>
+                    <option value="high">High</option>
+                    <option value="neutral">Neutral</option>
+                    <option value="low">Low</option>
+                    <option value="verylow">Very Low</option>
+                </select>
+                <span class="error" id="adaptabilityError"></span>
+                <br><br>
+    
+                <label style="margin-left: 20px;">Suitable For Small Children: </label>
+                <input type="radio" id="yes" name="suitability" value ="yes">
+                <label for="yes">Yes</label>
+                <input type="radio" id="no" name="suitability" value ="no">
+                <label for="no">No</label>
+                <span class="error" id="suitabilityError"></span>
+    
+                <br><br>
+                <label for="description" class="form-label">Any description (Optional):</label><br>
+                <textarea id="description" name="description" rows="4" class="form-textarea" placeholder="Write any specific details about the pet..."></textarea>
+                <br><br>
+    
+                <label for="petimage" style="margin-left: 20px;">Upload Pet's Image (Optional):</label>
+                <input type="file" id="petimage" name="petimage" accept="image/*">
+                <br><br>
+    
+            </fieldset>
+            <br>
+        
+            <input type="submit" value="Submit" class="submit-button">
+            <input type="reset" value="Clear" class="clear-button">
+    
+
+        </form>
+
+        <!-- <form action="/logout" method="post">
+            <button type="submit">Log Out</button>
+        </form> -->
+        
+        
+
+        <p class="description">
+            Thank you for providing the details about your pet. Our team will review your submission and contact you within 7-14 business days to schedule an interview. We appreciate your trust in us to find a new loving home for your pet.
+        </p>
+
+        <%- include('layouts/footer') %>
+
+        <script src="/js/giveawayform.js"> </script>
+    </body>
+</html>

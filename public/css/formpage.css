@@ -1,0 +1,141 @@
+h1 {
+    font-family: cursive, bradley hand; 
+    font-size: 24px;
+    font-weight: bold;
+    color: #f01961; 
+    text-align: center;
+}
+
+p{
+    font-size: large;
+}
+
+.pp{
+    font-size: x-small;
+}
+
+legend{
+    font-size: larger;
+    font-weight: bold;
+    color:rgb(154, 69, 196);
+}
+
+fieldset {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: small;
+    padding: 20px;
+    border: 2px solid #faf9f9;
+    border-radius: 8px;
+    position: relative;
+    color: white;
+    overflow: hidden;
+    background-color: rgb(214, 245, 219);
+}
+fieldset::before {
+    content: '';
+    position:absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 8px;
+    z-index: 0;
+}
+fieldset > * {
+    position: relative;
+    z-index: 1;
+}
+
+fieldset, label{
+    color:#240604;
+}
+
+.footer-bottom{
+    font-size: x-small;
+}
+.submit-button {
+    width: 20%;
+    padding: 10px;
+    background-color: #c4f7c8;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #a8e190;
+}
+
+.clear-button {
+    width: 20%;
+    padding: 10px;
+    background-color: #c4f7c8;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.clear-button:hover {
+    background-color: #a8e190;
+}
+
+.form-label {
+    margin-left: 20px;
+}
+
+.form-textarea {
+    margin-left: 20px;
+    width: 90%;
+    max-width: 440px; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical; 
+}
+
+@media (max-width: 767px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: medium;
+    }
+
+    legend {
+        font-size: medium;
+    }
+
+    fieldset {
+        padding: 15px;
+        font-size: small;
+    }
+    .form-textarea{
+        width:90%;
+        margin-left:0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    h1 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: medium;
+    }
+
+    legend {
+        font-size: large;
+    }
+
+    fieldset {
+        padding: 18px;
+        font-size: small;
+    }
+    .form-textarea{
+        width:80%;
+    }
+}
